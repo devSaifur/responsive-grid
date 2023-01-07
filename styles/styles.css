@@ -1,0 +1,153 @@
+*,*::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0; /* remove default margin */
+    padding: 0; /* remove default padding */ 
+  }
+  
+  body {
+    line-height: 1.5; /* Add accessible line-height */
+    -webkit-font-smoothing: antialiased; /* Improve text rendering */
+  }
+  
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  } /* avoid text overflow */
+  
+  html, body {
+    height: 100%;
+  } /* Allow percentage-based heights in the application */
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  } /* Improve media defaults */
+  
+  input, button, textarea, select {
+    font: inherit;
+  } /* Remove built-in form typography styles */
+  
+  #root, #__next {
+      isolation: isolate;
+  } /* Create a root stacking context */
+
+:root {
+  --ff-primary: 'Barlow Semi Condensed', sans-serif;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  --clr-primary: hsl(0, 0%, 81%);
+  --clr-secondary: hsl(210, 46%, 95%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --bg-card-vibrate: hsl(263, 55%, 52%);
+  --bg-card-light: hsl(217, 19%, 35%);
+  --bg-card-dark: hsl(219, 29%, 14%);
+}
+body {
+  font-family: var(--ff-primary);
+  font-size: 0.813rem;
+}
+section {
+  display: grid;
+  margin: 3.5rem 1.5rem;
+  gap: 1rem;
+}
+.subsection-1 {
+  display: grid;
+  gap: 1rem;
+}
+.upper-subsection {
+  display: grid;
+  gap: 1rem;
+}
+.lower-subsection {
+  display: grid;
+  gap: 1rem;
+}
+.person-1,
+.person-2,
+.person-3,
+.person-4,
+.person-5 {
+  display: grid;
+  font-weight: var(--fw-medium);
+  padding: 1.5rem;
+  border-radius: 0.35rem;
+  row-gap: 1rem;
+}
+.person-1,
+.person-2,
+.person-4 {
+  color: var(--clr-white);
+}
+.person-3,
+.person-5 {
+  color: var(--bg-card-light);
+}
+.name {
+  font-weight: var(--fw-semibold);
+}
+.status {
+  opacity: 50%;
+}
+.comments {
+  display: grid;
+  row-gap: 1rem;
+}
+.comments p {
+  opacity: 70%;
+}
+.person-1 {
+  background-color: var(--bg-card-vibrate);
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right 2rem;
+}
+.person-2 {
+  background-color: var(--bg-card-light);
+}
+.person-3 {
+  box-shadow: 5px 7px 5px rgba(32, 72, 90, 0.3);
+}
+.person-4 {
+  display: grid;
+  background-color: var(--bg-card-dark);
+}
+.person-5 {
+  display: grid;
+  box-shadow: 5px 7px 5px rgba(32, 72, 90, 0.3);
+}
+img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 4rem;
+  margin-block: auto;
+}
+.profile {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  section {
+    max-width: 72rem;
+    grid-template-columns: 4fr 1fr;
+    margin-inline: auto;
+    gap: 1.5rem;
+  }
+  .upper-subsection {
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+  }
+  .lower-subsection {
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+  }
+  body {
+    padding-inline: 2rem;
+  }
+}
