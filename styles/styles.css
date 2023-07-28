@@ -1,40 +1,57 @@
-*,*::before, *::after {
-    box-sizing: border-box;
-  }
-  
-  * {
-    margin: 0; /* remove default margin */
-    padding: 0; /* remove default padding */ 
-  }
-  
-  body {
-    line-height: 1.5; /* Add accessible line-height */
-    -webkit-font-smoothing: antialiased; /* Improve text rendering */
-  }
-  
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  } /* avoid text overflow */
-  
-  html, body {
-    height: 100%;
-  } /* Allow percentage-based heights in the application */
-  
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  } /* Improve media defaults */
-  
-  input, button, textarea, select {
-    font: inherit;
-  } /* Remove built-in form typography styles */
-  
-  #root, #__next {
-      isolation: isolate;
-  } /* Create a root stacking context */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0; /* remove default margin */
+  padding: 0; /* remove default padding */
+}
+
+body {
+  line-height: 1.5; /* Add accessible line-height */
+  -webkit-font-smoothing: antialiased; /* Improve text rendering */
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+} /* avoid text overflow */
+
+html,
+body {
+  height: 100%;
+} /* Allow percentage-based heights in the application */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+} /* Improve media defaults */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+} /* Remove built-in form typography styles */
+
+#root,
+#__next {
+  isolation: isolate;
+} /* Create a root stacking context */
 
 :root {
-  --ff-primary: 'Barlow Semi Condensed', sans-serif;
+  --ff-primary: "Barlow Semi Condensed", sans-serif;
   --fw-medium: 500;
   --fw-semibold: 600;
 
